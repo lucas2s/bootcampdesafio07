@@ -1,6 +1,10 @@
 import React, { Component } from 'react';
 import { ActivityIndicator } from 'react-native';
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
 import Icon from 'react-native-vector-icons/MaterialIcons';
+
+import * as CartActions from '../../store/modules/cart/actions';
 import {
   Container,
   ListProduct,
@@ -14,14 +18,13 @@ import {
   ProductAmount,
   Amount,
 } from './styles';
-// import { formatPrice } from '../../util/format';
+import { formatPrice } from '../../util/format';
 import api from '../../services/api';
 
-export default class Main extends Component {
+class Main extends Component {
   state = {
     products: [],
     loading: false,
-    amount: [],
   };
 
   async componentDidMount() {
@@ -29,15 +32,23 @@ export default class Main extends Component {
 
     const data = response.data.map(product => ({
       ...product,
-      // priceFormatted: formatPrice(product.price),
-      priceFormatted: product.price,
+      priceFormatted: formatPrice(product.price),
     }));
 
     this.setState({ products: data });
   }
 
+  handleAddProduct = id => {
+    const { addToCartRequest } = this.props;
+
+    addToCartRequest(id);
+  };
+
   render() {
-    const { products, loading, amount } = this.state;
+    const { products, loading } = this.state;
+
+    const { amount } = this.props;
+
     return (
       <Container>
         <ListProduct
@@ -49,7 +60,10 @@ export default class Main extends Component {
               <ProductImage source={{ uri: item.image }} />
               <ProductTitle>{item.title}</ProductTitle>
               <ProductPrice>{item.priceFormatted}</ProductPrice>
-              <AddCart loading={loading} onPress={this.handleAddUser}>
+              <AddCart
+                loading={loading}
+                onPress={() => this.handleAddProduct(item.id)}
+              >
                 <ProductAmount>
                   <Icon name="add-shopping-cart" color="#FFF" size={16} />
                   <Amount> {amount[item.id] || 0} </Amount>
@@ -69,3 +83,16 @@ export default class Main extends Component {
     );
   }
 }
+
+const mapStateToProps = state => ({
+  amount: state.cart.reduce((amount, product) => {
+    amount[product.id] = product.amount;
+
+    return amount;
+  }, {}),
+});
+
+const mapDispatchToProps = dispatch =>
+  bindActionCreators(CartActions, dispatch);
+
+export default connect(mapStateToProps, mapDispatchToProps)(Main);

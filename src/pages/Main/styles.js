@@ -52,6 +52,7 @@ export const AddCart = styled(RectButton)`
   background: #7159c1;
   border-radius: 4px;
   border: 1px solid #979797;
+  opacity: ${props => (props.loading ? 0.7 : 1)};
 `;
 
 export const ProductAdd = styled.View`

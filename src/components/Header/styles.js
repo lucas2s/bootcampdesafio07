@@ -10,12 +10,17 @@ export const Container = styled.View`
   padding: 0 20px;
 `;
 
-export const Logo = styled.Image`
+export const Logo = styled.TouchableOpacity`
   width: 185px;
   height: 24px;
 `;
 
-export const Cart = styled.View`
+export const LogoImg = styled.Image`
+  width: 185px;
+  height: 24px;
+`;
+
+export const Cart = styled.TouchableOpacity`
   flex: 1;
   align-items: flex-end;
   align-content: center;
