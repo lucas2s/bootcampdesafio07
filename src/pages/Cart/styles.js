@@ -5,14 +5,17 @@ export const Container = styled.View`
   background: #191920;
 `;
 
-export const ListCartProduct = styled.FlatList.attrs({
-  showsHorizontalScrollIndicator: false,
-})`
+export const ContainerProducts = styled.View`
   margin: 20px;
   background: #fff;
   border-radius: 4px;
-  flex-grow: 0;
+  border: 1px solid #dddddd;
+  max-height: 93%;
 `;
+
+export const ListCartProducts = styled.FlatList.attrs({
+  showsHorizontalScrollIndicator: false,
+})``;
 
 export const Product = styled.View`
   margin: 20px;
@@ -93,4 +96,53 @@ export const ProductSubtotal = styled.Text`
 
 export const ProductUpddateAmount = styled.View`
   flex-direction: row;
+`;
+
+export const TotalContainer = styled.View`
+  margin-top: 30px;
+`;
+export const TotalText = styled.Text`
+  text-align: center;
+  color: #999;
+  font-weight: bold;
+`;
+export const TotalAmount = styled.Text`
+  text-align: center;
+  margin-top: 5px;
+  margin-bottom: 30px;
+  font-size: 32px;
+  font-weight: bold;
+`;
+export const Order = styled.TouchableOpacity`
+  background: #7159c1;
+  padding: 12px;
+  border-radius: 4px;
+  margin: 10px;
+`;
+
+export const OrderText = styled.Text`
+  color: #fff;
+  font-weight: bold;
+  font-size: 14px;
+  text-align: center;
+`;
+
+export const CartEmpty = styled.View`
+  margin: 30px 10px;
+  align-items: center;
+`;
+
+export const EmptyAlert = styled.Text`
+  color: #999;
+  font-weight: bold;
+  font-size: 14px;
+  text-align: center;
+  margin-bottom: 30px;
+`;
+
+export const Emptytext = styled.Text`
+  color: #7159c1;
+  font-weight: bold;
+  font-size: 14px;
+  text-align: center;
 `;

@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import { ActivityIndicator } from 'react-native';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
@@ -25,6 +26,10 @@ class Main extends Component {
   state = {
     products: [],
     loading: false,
+  };
+
+  static propTypes = {
+    addToCartRequest: PropTypes.func.isRequired,
   };
 
   async componentDidMount() {
@@ -87,7 +92,6 @@ class Main extends Component {
 const mapStateToProps = state => ({
   amount: state.cart.reduce((amount, product) => {
     amount[product.id] = product.amount;
-
     return amount;
   }, {}),
 });
