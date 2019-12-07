@@ -78,12 +78,12 @@ O Projeto desenvolvido em ReactJS com aplicação de diversas tecnologias e bibl
   </tr>
   <tr align="center">
     <td>
-      <img alt="Tela Home" src="./imagens/tela1.png" width="250px"/>
-      <img alt="Tela Home" src="./imagens/tela1.png" width="250px"/>
+      <img alt="Tela Home" src="./imagens/Tela1.png" width="250px"/>
+      <img alt="Tela Home" src="./imagens/Tela2.png" width="250px"/>
     </td>
     <td>
-      <img alt="Tela Cart" src="./imagens/tela3.png" width="250px"/>
-      <img alt="Tela Cart" src="./imagens/tela4.png" width="250px"/>
+      <img alt="Tela Cart" src="./imagens/Tela3.png" width="250px"/>
+      <img alt="Tela Cart" src="./imagens/Tela4.png" width="250px"/>
       </td>
   </tr>
 </table>
