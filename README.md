@@ -13,15 +13,15 @@
     <img alt="GitHub Lucas Sartori" src="https://img.shields.io/github/followers/lucasssartori?style=social">
   </a>
 
-  <a href="https://github.com/lucasssartori/bootcampdesafio06/stargazers">
-    <img alt="Stargazers" src="https://img.shields.io/github/stars/lucasssartori/bootcampdesafio05?style=social">
+  <a href="https://github.com/lucasssartori/bootcampdesafio07/stargazers">
+    <img alt="Stargazers" src="https://img.shields.io/github/stars/lucasssartori/bootcampdesafio07?style=social">
   </a>
-  <a href="https://github.com/lucasssartori/bootcampdesafio06/forks/">
-    <img alt="Stargazers" src="https://img.shields.io/github/forks/lucasssartori/bootcampdesafio05?style=social">
+  <a href="https://github.com/lucasssartori/bootcampdesafio07/forks/">
+    <img alt="Stargazers" src="https://img.shields.io/github/forks/lucasssartori/bootcampdesafio07?style=social">
   </a>
 
-  <a href="https://github.com/lucasssartori/bootcampdesafio06/watchers">
-    <img alt="watchers" src="https://img.shields.io/github/watchers/lucasssartori/bootcampdesafio05?style=social">
+  <a href="https://github.com/lucasssartori/bootcampdesafio07/watchers">
+    <img alt="watchers" src="https://img.shields.io/github/watchers/lucasssartori/bootcampdesafio07?style=social">
   </a>
 </p>
 
