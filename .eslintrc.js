@@ -23,7 +23,6 @@ module.exports = {
   plugins: [
     'react',
     'prettier',
-    'react-hooks'
   ],
   rules: {
     'react/jsx-props-no-spreading':'off',
